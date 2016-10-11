@@ -12,6 +12,8 @@ namespace Forms
         public MainPage()
         {
             InitializeComponent();
+            
+            BindingContext = new ViewModels.HomeViewModel();
         }
     }
 }

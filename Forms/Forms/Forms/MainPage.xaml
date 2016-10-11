@@ -34,19 +34,19 @@
     <Label Text="Name"
            Style="{StaticResource CustomLabelStyle}"/>
     
-    <Entry Text="Mohamed"
+    <Entry Text="{Binding TaskModel.Name}"
            Style="{StaticResource CustomEntryStyle}"/>
 
     <Label Text="Surname"
        Style="{StaticResource CustomLabelStyle}"/>
 
-    <Entry Text="Ahamed"
+    <Entry Text="{Binding TaskModel.Surname}"
           Style="{StaticResource CustomEntryStyle}"/>
 
     <Label Text="Email"
        Style="{StaticResource CustomLabelStyle}"/>
 
-    <Entry Text="Mohamed@"
+    <Entry Text="{Binding TaskModel.Email}"
           Style="{StaticResource CustomEntryStyle}"/>
   
   </StackLayout>
