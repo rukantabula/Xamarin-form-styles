@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Forms"
              x:Class="Forms.MainPage"
-             BackgroundColor="#DDFFFFFF">
+             BackgroundColor="#DDFFFFFF"
+             xmlns:converters="clr-namespace:Forms.Converters;assembly=Forms">
   
    <ContentPage.Resources>
         <ResourceDictionary>
             
+              <converters:TextToColorConverter x:Key="TextToColorConverter"/>
+                
+              
   
       <Style x:Key="CustomLabelStyle"
              TargetType="Label">
@@ -48,9 +52,13 @@
 
     <Entry Text="{Binding TaskModel.Email, Mode=TwoWay}"
           Style="{StaticResource CustomEntryStyle}"/>
+    
   <Button Text="Save Task"
           Command="{Binding SaveCommand}"/>
-  <Label Text="{Binding Message}"/>
+    
+  <Label Text="{Binding Message}"
+         TextColor="{Binding Message, Converter={StaticResource TextToColorConverter}}"/>
+  
   </StackLayout>
 
 </ContentPage>
