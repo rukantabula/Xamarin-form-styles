@@ -34,21 +34,23 @@
     <Label Text="Name"
            Style="{StaticResource CustomLabelStyle}"/>
     
-    <Entry Text="{Binding TaskModel.Name}"
+    <Entry Text="{Binding TaskModel.Name, Mode=TwoWay}"
            Style="{StaticResource CustomEntryStyle}"/>
 
     <Label Text="Surname"
        Style="{StaticResource CustomLabelStyle}"/>
 
-    <Entry Text="{Binding TaskModel.Surname}"
+    <Entry Text="{Binding TaskModel.Surname, Mode=TwoWay}"
           Style="{StaticResource CustomEntryStyle}"/>
 
     <Label Text="Email"
        Style="{StaticResource CustomLabelStyle}"/>
 
-    <Entry Text="{Binding TaskModel.Email}"
+    <Entry Text="{Binding TaskModel.Email, Mode=TwoWay}"
           Style="{StaticResource CustomEntryStyle}"/>
-  
+  <Button Text="Save Task"
+          Command="{Binding SaveCommand}"/>
+  <Label Text="{Binding Message}"/>
   </StackLayout>
 
 </ContentPage>
